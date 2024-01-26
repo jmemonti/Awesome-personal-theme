@@ -25,26 +25,27 @@ return gears.table.join(
     { description = "Close focused client", group = "Client" }
   ),
 
-  awful.key(
-    { modkey },
-    "#42",
-    awful.client.floating.toggle,
-    { description = "Toggle floating window", group = "Client" }
-  ),
+  --awful.key(
+  --  { modkey },
+  --  "t",
+  --  awful.client.floating.toggle,
+  --  { description = "Toggle floating window", group = "Client" }
+  --),
 
+  --awful.key(
+  --  { modkey },
+  --  "m",
+  --  function(c)
+  --    c.maximized = not c.maximized
+  --    c:raise()
+  --  end,
+  --  { description = "(un)maximize", group = "Client" }
+  --),
+  
+  --Minize window
   awful.key(
     { modkey },
-    "m",
-    function(c)
-      c.maximized = not c.maximized
-      c:raise()
-    end,
-    { description = "(un)maximize", group = "Client" }
-  ),
-
-  awful.key(
-    { modkey },
-    "#57",
+    "n",
     function(c)
       if c == client.focus then
         c.minimized = true

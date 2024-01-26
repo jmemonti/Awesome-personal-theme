@@ -179,7 +179,8 @@ return gears.table.join(
     end,
     { descripton = "Application launcher", group = "Application" }
   ),
-
+  
+  --Rofi alt+tab selector
   awful.key(
     { modkey },
     "#23",
@@ -201,12 +202,23 @@ return gears.table.join(
   --Open file manager
   awful.key(
     { modkey },
-    "#26",
+    "e",
     function()
       awful.spawn(user_vars.file_manager)
     end,
     { descripton = "Open file manager", group = "System" }
   ),
+
+  --Open browser
+  awful.key(
+    { modkey }, 
+    "b",
+    function ()
+      awful.spawn(user_vars.browser) 
+    end,
+    {description = "Open browser", group = "Application" }
+  ),
+
 
   awful.key(
     { modkey, "Shift" },

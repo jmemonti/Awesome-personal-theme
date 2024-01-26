@@ -10,12 +10,13 @@ user_vars = {
 
   -- Autotiling layouts
   layouts = {
+    awful.layout.suit.fair,
     awful.layout.suit.tile,
     awful.layout.suit.tile.left,
     awful.layout.suit.tile.bottom,
     awful.layout.suit.tile.top,
     awful.layout.suit.floating,
-    awful.layout.suit.fair,
+    --awful.layout.suit.fair,
     awful.layout.suit.fair.horizontal,
     awful.layout.suit.corner.nw,
     awful.layout.suit.corner.ne,
@@ -37,8 +38,8 @@ user_vars = {
 
   -- Type 'ip a' and check your wlan and ethernet name
   network = {
-    wlan = "wlo1",
-    ethernet = "eno1"
+    wlan = "wlp7s0",
+    ethernet = "enp8s0f1"
   },
 
   -- Set your font with this format:
@@ -70,8 +71,11 @@ user_vars = {
   -- Screenshot program to make a screenshot when print is hit
   screenshot_program = "flameshot gui",
 
+  --Browser
+  browser = "firefox",
+
   -- If you use the dock here is how you control its size
-  dock_icon_size = dpi(50),
+  --dock_icon_size = dpi(50),
 
   -- Add your programs exactly like in this example.
   -- First entry has to be how you would start the program in the terminal (just try it if you dont know yahoo it)
@@ -80,20 +84,20 @@ user_vars = {
   -- {"394360", "Name", true} true will tell the func that it's a steam game
   -- Use xprop | grep WM_CLASS and use the *SECOND* string
   -- { WM_CLASS, program, name, user_icon, isSteam }
-  dock_programs = {
-    { "Alacritty", "alacritty", "Alacritty" },
-    { "firefox", "firefox", "Firefox" },
-    { "discord", "discord", "Discord" },
-    { "Spotify", "flatpak run com.spotify.Client", "Spotify" },
-    { "Code", "code", "Visual Studio Code" },
-    { "processing-app-Base", "arduino", "Arduino IDE" },
-    { "Zoom", "flatpak run us.zoom.Zoom", "Zoom" },
-    { "Thunderbird", "thunderbird", "Thunderbird" },
-    { "Mattermost", "mattermost-desktop", "Mattermost" },
-    { "Blender", "blender", "Blender" },
-    { "Steam", "steam", "Steam" },
-    { "FreeCAD", "freecad", "FreeCAD" },
-    { "Thunar", "thunar", "Dateien" },
-    { "Windows", "virsh start Windows_11", "Windows 11", "/home/crylia/Bilder/windows.png", false, 50 }
-  }
+  --dock_programs = {
+  --  { "Alacritty", "alacritty", "Alacritty" },
+  --  { "firefox", "firefox", "Firefox" },
+  --  { "discord", "discord", "Discord" },
+  --  { "Spotify", "flatpak run com.spotify.Client", "Spotify" },
+  --  { "Code", "code", "Visual Studio Code" },
+  --  { "processing-app-Base", "arduino", "Arduino IDE" },
+  --  { "Zoom", "flatpak run us.zoom.Zoom", "Zoom" },
+  --  { "Thunderbird", "thunderbird", "Thunderbird" },
+  --  { "Mattermost", "mattermost-desktop", "Mattermost" },
+  --  { "Blender", "blender", "Blender" },
+  --  { "Steam", "steam", "Steam" },
+  --  { "FreeCAD", "freecad", "FreeCAD" },
+  -- { "Thunar", "thunar", "Dateien" },
+  --{ "Windows", "virsh start Windows_11", "Windows 11", "/home/crylia/Bilder/windows.png", false, 50 }
+  --}
 }

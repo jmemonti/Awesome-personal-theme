@@ -7,6 +7,8 @@
 -- ╚═╝  ╚═╝ ╚══╝╚══╝ ╚══════╝╚══════╝ ╚═════╝ ╚═╝     ╚═╝╚══════╝ ╚══╝╚══╝ ╚═╝     ╚═╝ --
 -----------------------------------------------------------------------------------------
 -- Initialising, order is important!
+local awful = require("awful")
+
 require("src.theme.user_variables")
 require("src.theme.init")
 require("src.core.error_handling")
@@ -17,3 +19,7 @@ require("mappings.global_buttons")
 require("mappings.bind_to_tags")
 require("crylia_bar.init")
 require("src.tools.auto_starter")(user_vars.autostart)
+
+--Autostart applications
+awful.spawn.with_shell("udiskie")
+awful.spawn.with_shell("picom")
