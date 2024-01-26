@@ -12,10 +12,11 @@ require("src.core.signals")
 
 -- Icon directory path
 local icondir = awful.util.getdir("config") .. "src/assets/icons/date/"
+local month_calendar = awful.widget.calendar_popup.month()
 
 -- Returns the date widget
 return function()
-
+  
   local date_widget = wibox.widget {
     {
       {

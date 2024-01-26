@@ -138,12 +138,12 @@ return function(s)
   end
 
   local shutdown_command = function()
-    awful.spawn("shutdown now")
+    awful.spawn("shutdown -h now")
     awesome.emit_signal("module::powermenu:hide")
   end
 
   local reboot_command = function()
-    awful.spawn("reboot")
+    awful.spawn("reboot now")
     awesome.emit_signal("module::powermenu:hide")
   end
 
