@@ -66,7 +66,7 @@ user_vars = {
   kblayout = { "de", "ru" },
 
   -- Your filemanager that opens with super+e
-  file_manager = "thunar",
+  file_manager = "nemo",
 
   -- Screenshot program to make a screenshot when print is hit
   screenshot_program = "flameshot gui",
