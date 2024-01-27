@@ -369,15 +369,6 @@ naughty.connect_signal(
         if key == 3 then
           n:destroy()
         end
-        -- TODO: Find out how to get the associated client
-        --[[ if key == 1 then
-          if n.clients then
-            n.clients[1]:activate {
-              switch_to_tag = true,
-              raise         = true
-            }
-          end
-        end ]]
       end
     )
 
@@ -391,9 +382,6 @@ naughty.connect_signal(
       end,
       widget_template = w_template
     }
-
-    box.buttons = {}
-    n.buttons = {}
   end
 )
 

@@ -1,5 +1,5 @@
 -------------------------------------------------------------------------------------------------
--- This class contains rules for float exceptions or special themeing for certain applications --
+-- This class contains rules for float windows exceptions or special themeing for certain applications --
 -------------------------------------------------------------------------------------------------
 
 -- Awesome Libs
@@ -18,7 +18,7 @@ awful.rules.rules = {
       --All aplications in windows never floating
       floating     = false,
       keys         = require("../../mappings/client_keys"),
-      buttons      = require("../../mappings/client_buttons"),
+      -- buttons      = require("../../mappings/client_buttons"),
       screen       = awful.screen.preferred,
       placement    = awful.placement.no_overlap --+ awful.placement.no_offscreen
     }

@@ -38,13 +38,16 @@ return function()
               widget = wibox.widget.imagebox,
               resize = false
             },
+
             id = "icon_layout",
             widget = wibox.container.place
           },
+
           id = "icon_margin",
           top = dpi(2),
           widget = wibox.container.margin
         },
+
         spacing = dpi(10),
         {
           id = "label",
@@ -56,25 +59,19 @@ return function()
         id = "network_layout",
         layout = wibox.layout.fixed.horizontal
       },
+
       id = "container",
       left = dpi(8),
       right = dpi(8),
       widget = wibox.container.margin
     },
+
     bg = color["Red200"],
     fg = color["Grey900"],
     shape = function(cr, width, height)
       gears.shape.rounded_rect(cr, width, height, 5)
     end,
     widget = wibox.container.background
-  }
-
-  local network_tooltip = awful.tooltip {
-    text = "Loading",
-    objects = { network_widget },
-    mode = "inside",
-    preferred_alignments = "middle",
-    margins = dpi(10)
   }
 
   local check_for_internet = [=[
@@ -100,10 +97,6 @@ return function()
 
   local update_reconnect_startup = function(status)
     reconnect_startup = status
-  end
-
-  local update_tooltip = function(message)
-    network_tooltip:set_markup(message)
   end
 
   local network_notify = function(message, title, app_name, icon)
@@ -133,13 +126,6 @@ return function()
         function(stdout)
           local essid = stdout:match("SSID: (.-)\n") or "N/A"
           local bitrate = stdout:match("tx bitrate: (.+/s)") or "N/A"
-          local message = "Connected to <b>" .. essid .. "</b>\nSignal strength <b>" .. tostring(wifi_strength) .. "%</b>\n" .. "Bit rate <b>" .. tostring(bitrate) .. "</b>"
-
-          if healthy then
-            update_tooltip(message)
-          else
-            update_tooltip("You are connected but have no internet" .. message)
-          end
 
           if reconnect_startup or startup then
             notify_connected(essid)
@@ -209,11 +195,7 @@ return function()
 
         if stdout:match("Connected but no internet") then
           icon = "no-internet"
-          update_tooltip(
-            "No internet"
-          )
         else
-          update_tooltip("You are connected to:\nEthernet Interface <b>" .. interfaces.lan_interface .. "</b>")
           if startup or reconnect_startup then
             awesome.emit_signal("system::network_connected")
             notify_connected()
@@ -259,7 +241,6 @@ return function()
       end
     end
     network_widget.container.network_layout.label.visible = false
-    update_tooltip("Network unreachable")
     network_widget.container.network_layout.spacing = dpi(0)
     network_widget.container.network_layout.icon_margin.icon_layout.icon:set_image(gears.color.recolor_image(icondir .. icon .. ".svg", color["Grey900"]))
   end

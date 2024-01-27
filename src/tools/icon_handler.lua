@@ -3,9 +3,7 @@
 -----------------------------------------------------
 local icon_cache = {}
 
--- tries to find a matching file name in /usr/share/icons/THEME/RESOLUTION/apps/ and if not found tried with first letter
--- as uppercase, this should get almost all icons to work with the papirus theme atleast
--- TODO: try with more icon themes
+--No tocar(iconos del tag(escritorios))
 function Get_icon(theme, client, program_string, class_string, is_steam)
 
   client = client or nil
