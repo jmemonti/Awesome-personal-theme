@@ -8,7 +8,7 @@
 -----------------------------------------------------------------------------------------
 -- Initialising, order is important!
 local awful = require("awful")
-
+require("collision")()
 require("src.theme.user_variables")
 require("src.theme.init")
 require("src.core.error_handling")

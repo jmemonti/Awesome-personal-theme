@@ -16,26 +16,26 @@ return gears.table.join(
   ),
 
   -- Escritories browsing
-  awful.key(
-    { modkey },
-    "j",
-    awful.tag.viewprev,
-    { description = "View previous tag", group = "Tag" }
-  ),
+  --awful.key(
+  --  { modkey, "Control" },
+  --  "j",
+  --  awful.tag.viewprev,
+  --  { description = "View previous tag", group = "Tag" }
+  --),
 
-  awful.key(
-    { modkey },
-    "l",
-    awful.tag.viewnext,
-    { description = "View next tag", group = "Tag" }
-  ),
+  --awful.key(
+  --  { modkey, "Control" },
+  --  "l",
+  --  awful.tag.viewnext,
+  --  { description = "View next tag", group = "Tag" }
+  --),
 
-  awful.key(
-    { modkey },
-    "k",
-    awful.tag.history.restore,
-    { description = "Go back to last tag", group = "Tag" }
-  ),
+  --awful.key(
+  --  { modkey, "Control" },
+  --  "k",
+  --  awful.tag.history.restore,
+  --  { description = "Go back to last tag", group = "Tag" }
+  --),
 
   --Open terminal
   awful.key(
@@ -114,7 +114,7 @@ return gears.table.join(
     {description = "Open browser", group = "Application" }
   ),
 
-
+  --Power menu
   awful.key(
     { modkey, "Shift" },
     "#26",
