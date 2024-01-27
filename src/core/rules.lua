@@ -15,10 +15,12 @@ awful.rules.rules = {
       border_color = beautiful.border_normal,
       focus        = awful.client.focus.filter,
       raise        = true,
+      --All aplications in windows never floating
+      floating     = false,
       keys         = require("../../mappings/client_keys"),
       buttons      = require("../../mappings/client_buttons"),
       screen       = awful.screen.preferred,
-      placement    = awful.placement.no_overlap + awful.placement.no_offscreen
+      placement    = awful.placement.no_overlap --+ awful.placement.no_offscreen
     }
   },
   {
@@ -39,27 +41,13 @@ awful.rules.rules = {
         "pop-up"
       }
     },
-    properties = { floating = true, titlebars_enabled = true }
+    properties = { floating = false, titlebars_enabled = false }
   },
   {
     id = "titlebar",
     rule_any = {
       type = { "normal", "dialog", "modal", "utility" }
     },
-    properties = { titlebars_enabled = true }
+    properties = { titlebars_enabled = false }
   }
 }
-
-awful.spawn.easy_async_with_shell(
-  "cat ~/.config/awesome/src/assets/rules.txt",
-  function(stdout)
-  for class in stdout:gmatch("%a+") do
-    ruled.client.append_rule {
-      rule = { class = class },
-      properties = {
-        floating = true
-      },
-    }
-  end
-end
-)

@@ -4,6 +4,7 @@ local gears = require("gears")
 local globalkeys = require("../mappings/global_keys")
 local modkey = user_vars.modkey
 
+--to create 9 tags
 for i = 1, 9 do
   globalkeys = gears.table.join(globalkeys,
 
@@ -21,7 +22,8 @@ for i = 1, 9 do
       end,
       { description = "View Tag " .. i, group = "Tag" }
     ),
-    -- Brings the window over without chaning the tag, reverts automatically on tag change
+
+    -- Mover la ventana seleccionada movida a su tag("escritorio") inicial
     awful.key(
       { modkey, "Control" },
       "#" .. i + 9,
@@ -34,7 +36,8 @@ for i = 1, 9 do
       end,
       { description = "Toggle Tag " .. i, group = "Tag" }
     ),
-    -- Brings the window over without chaning the tag, reverts automatically on tag change
+
+    -- Mueves la ventana seleccionada al tag("escritorios") que indiques
     awful.key(
       { modkey, "Shift" },
       "#" .. i + 9,
@@ -45,19 +48,6 @@ for i = 1, 9 do
           if tag then
             client.focus:move_to_tag(tag)
           end
-        end
-      end,
-      { description = "Move focused client on tag " .. i, group = "Tag" }
-    ),
-    -- Brings the window over without chaning the tag, reverts automatically on tag change
-    awful.key(
-      { modkey, "Control", "Shift" },
-      "#" .. i + 9,
-      function()
-        local screen = awful.screen.focused()
-        local tag = screen.tags[i]
-        if tag then
-          awful.tag.viewtoggle(tag)
         end
       end,
       { description = "Move focused client on tag " .. i, group = "Tag" }

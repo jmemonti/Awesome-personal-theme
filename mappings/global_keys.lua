@@ -15,28 +15,6 @@ return gears.table.join(
     { description = "Cheat sheet", group = "Awesome" }
   ),
 
-  -- Escritories browsing
-  --awful.key(
-  --  { modkey, "Control" },
-  --  "j",
-  --  awful.tag.viewprev,
-  --  { description = "View previous tag", group = "Tag" }
-  --),
-
-  --awful.key(
-  --  { modkey, "Control" },
-  --  "l",
-  --  awful.tag.viewnext,
-  --  { description = "View next tag", group = "Tag" }
-  --),
-
-  --awful.key(
-  --  { modkey, "Control" },
-  --  "k",
-  --  awful.tag.history.restore,
-  --  { description = "Go back to last tag", group = "Tag" }
-  --),
-
   --Open terminal
   awful.key(
     { modkey },

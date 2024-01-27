@@ -73,31 +73,4 @@ user_vars = {
 
   --Browser
   browser = "firefox",
-
-  -- If you use the dock here is how you control its size
-  --dock_icon_size = dpi(50),
-
-  -- Add your programs exactly like in this example.
-  -- First entry has to be how you would start the program in the terminal (just try it if you dont know yahoo it)
-  -- Second can be what ever the fuck you want it to be (will be the displayed name if you hover over it)
-  -- For steam games please use this format (look in .local/share/applications for the .desktop file, that will contain the number you need)
-  -- {"394360", "Name", true} true will tell the func that it's a steam game
-  -- Use xprop | grep WM_CLASS and use the *SECOND* string
-  -- { WM_CLASS, program, name, user_icon, isSteam }
-  --dock_programs = {
-  --  { "Alacritty", "alacritty", "Alacritty" },
-  --  { "firefox", "firefox", "Firefox" },
-  --  { "discord", "discord", "Discord" },
-  --  { "Spotify", "flatpak run com.spotify.Client", "Spotify" },
-  --  { "Code", "code", "Visual Studio Code" },
-  --  { "processing-app-Base", "arduino", "Arduino IDE" },
-  --  { "Zoom", "flatpak run us.zoom.Zoom", "Zoom" },
-  --  { "Thunderbird", "thunderbird", "Thunderbird" },
-  --  { "Mattermost", "mattermost-desktop", "Mattermost" },
-  --  { "Blender", "blender", "Blender" },
-  --  { "Steam", "steam", "Steam" },
-  --  { "FreeCAD", "freecad", "FreeCAD" },
-  -- { "Thunar", "thunar", "Dateien" },
-  --{ "Windows", "virsh start Windows_11", "Windows 11", "/home/crylia/Bilder/windows.png", false, 50 }
-  --}
 }

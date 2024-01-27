@@ -20,6 +20,15 @@ require("mappings.bind_to_tags")
 require("crylia_bar.init")
 require("src.tools.auto_starter")(user_vars.autostart)
 
+awful.rules.rules = {
+    -- Regla para ejecutar una aplicación en un tag específico
+    { rule = { class = "firefox" },
+    properties = { tag = "1" } },
+
+    { rule = { class = "Alacritty" },
+    properties = { tag = "2" } },
+}
+
 --Autostart applications
 awful.spawn.with_shell("udiskie")
 awful.spawn.with_shell("picom")
