@@ -15,89 +15,28 @@ return gears.table.join(
     { description = "Cheat sheet", group = "Awesome" }
   ),
 
-  -- Tag browsing
+  -- Escritories browsing
   awful.key(
     { modkey },
-    "#113",
+    "j",
     awful.tag.viewprev,
     { description = "View previous tag", group = "Tag" }
   ),
 
   awful.key(
     { modkey },
-    "#114",
+    "l",
     awful.tag.viewnext,
     { description = "View next tag", group = "Tag" }
   ),
 
   awful.key(
     { modkey },
-    "#66",
+    "k",
     awful.tag.history.restore,
     { description = "Go back to last tag", group = "Tag" }
   ),
 
-  awful.key(
-    { modkey },
-    "#44",
-    function()
-      awful.client.focus.byidx(1)
-    end,
-    { description = "Focus next client by index", group = "Client" }
-  ),
-
-  awful.key(
-    { modkey },
-    "#45",
-    function()
-      awful.client.focus.byidx(-1)
-    end,
-    { description = "Focus previous client by index", group = "Client" }
-  ),
-
-  awful.key(
-    { modkey, "Shift" },
-    "#44",
-    function()
-      awful.client.swap.byidx(1)
-    end,
-    { description = "Swap with next client by index", group = "Client" }
-  ),
-
-  awful.key(
-    { modkey, "Shift" },
-    "#45",
-    function()
-      awful.client.swap.byidx(-1)
-    end,
-    { description = "Swap with previous client by index", group = "Client" }
-  ),
-
-  awful.key(
-    { modkey, "Control" },
-    "#44",
-    function()
-      awful.screen.focus_relative(1)
-    end,
-    { description = "Focus the next screen", group = "Screen" }
-  ),
-
-  awful.key(
-    { modkey, "Control" },
-    "#45",
-    function()
-      awful.screen.focus_relative(-1)
-    end,
-    { description = "Focus the previous screen", group = "Screen" }
-  ),
-
-  awful.key(
-    { modkey },
-    "#30",
-    awful.client.urgent.jumpto,
-    { description = "Jump to urgent client", group = "Client" }
-  ),
- 
   --Open terminal
   awful.key(
     { modkey },
@@ -116,54 +55,10 @@ return gears.table.join(
     { description = "Reload awesome", group = "Awesome" }
   ),
 
-  awful.key(
-    { modkey },
-    "#46",
-    function()
-      awful.tag.incmwfact(0.05)
-    end,
-    { description = "Increase client width", group = "Layout" }
-  ),
-
-  awful.key(
-    { modkey },
-    "#43",
-    function()
-      awful.tag.incmwfact(-0.05)
-    end,
-    { description = "Decrease client width", group = "Layout" }
-  ),
-
-  awful.key(
-    { modkey, "Control" },
-    "#43",
-    function()
-      awful.tag.incncol(1, nil, true)
-    end,
-    { description = "Increase the number of columns", group = "Layout" }
-  ),
-
-  awful.key(
-    { modkey, "Control" },
-    "#46",
-    function()
-      awful.tag.incncol(-1, nil, true)
-    end,
-    { description = "Decrease the number of columns", group = "Layout" }
-  ),
-
+  --Change layout distribution
   awful.key(
     { modkey, "Shift" },
-    "#65",
-    function()
-      awful.layout.inc(-1)
-    end,
-    { description = "Select previous layout", group = "Layout" }
-  ),
-
-  awful.key(
-    { modkey, "Shift" },
-    "#36",
+    "q",
     function()
       awful.layout.inc(1)
     end,
@@ -316,33 +211,6 @@ return gears.table.join(
       )
     end,
     { description = "Lower backlight brightness", group = "System" }
-  ),
-
-  awful.key(
-    {},
-    "XF86AudioPlay",
-    function(c)
-      awful.spawn("playerctl play-pause")
-    end,
-    { description = "Play / Pause audio", group = "System" }
-  ),
-
-  awful.key(
-    {},
-    "XF86AudioNext",
-    function(c)
-      awful.spawn("playerctl next")
-    end,
-    { description = "Play / Pause audio", group = "System" }
-  ),
-
-  awful.key(
-    {},
-    "XF86AudioPrev",
-    function(c)
-      awful.spawn("playerctl previous")
-    end,
-    { description = "Play / Pause audio", group = "System" }
   ),
 
   --Toggle keyboard layout

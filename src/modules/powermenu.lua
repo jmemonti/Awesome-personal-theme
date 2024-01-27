@@ -143,7 +143,7 @@ return function(s)
   end
 
   local reboot_command = function()
-    awful.spawn("reboot now")
+    awful.spawn("reboot")
     awesome.emit_signal("module::powermenu:hide")
   end
 
