@@ -16,7 +16,7 @@ awful.rules.rules = {
       focus        = awful.client.focus.filter,
       raise        = true,
       --All aplications in windows never floating
-      floating     = false,
+      --floating     = false,
       keys         = require("../../mappings/client_keys"),
       -- buttons      = require("../../mappings/client_buttons"),
       screen       = awful.screen.preferred,
@@ -41,13 +41,13 @@ awful.rules.rules = {
         "pop-up"
       }
     },
-    properties = { floating = false, titlebars_enabled = false }
+    properties = { floating = true, titlebars_enabled = true }
   },
   {
     id = "titlebar",
     rule_any = {
       type = { "normal", "dialog", "modal", "utility" }
     },
-    properties = { titlebars_enabled = false }
+    properties = { titlebars_enabled = true }
   }
 }
